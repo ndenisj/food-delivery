@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'widgets/home_top_info.dart';
+import 'widgets/food_category.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -12,9 +13,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: EdgeInsets.only(top: 50, left: 20, right: 20),
+        padding: EdgeInsets.only(top: 50, left: 10, right: 10),
         children: <Widget>[
           HomeTopInfo(),
+          FoodCategory(),
         ],
       ),
     );
