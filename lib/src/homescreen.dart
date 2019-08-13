@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'widgets/home_top_info.dart';
 import 'widgets/food_category.dart';
+import 'widgets/search_field.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,6 +18,10 @@ class _HomeScreenState extends State<HomeScreen> {
         children: <Widget>[
           HomeTopInfo(),
           FoodCategory(),
+          SizedBox(
+            height: 15,
+          ),
+          SearchField(),
         ],
       ),
     );

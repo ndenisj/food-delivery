@@ -9,3 +9,7 @@ const kCategoryTitleStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 16,
 );
+
+const kSearchTextStyle = TextStyle(
+  fontSize: 20,
+);
