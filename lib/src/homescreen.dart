@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/data/food_data.dart' as prefix0;
 import 'widgets/home_top_info.dart';
 import 'widgets/food_category.dart';
 import 'widgets/search_field.dart';
@@ -52,22 +53,24 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 20,
           ),
-          Column(
-            children: <Widget>[
-              _buildFoodItems(),
-              _buildFoodItems(),
-              _buildFoodItems(),
-            ],
-          ),
+          Column(children: _foods.map(_buildFoodItems).toList()),
         ],
       ),
     );
   }
 
-  Widget _buildFoodItems() {
+  Widget _buildFoodItems(Food food) {
     return Container(
       margin: EdgeInsets.only(bottom: 20.0),
-      child: BoughtFoods(),
+      child: BoughtFoods(
+        id: food.id,
+        name: food.name,
+        category: food.category,
+        imagePath: food.imagePath,
+        price: food.price,
+        ratings: food.ratings,
+        discount: food.discount,
+      ),
     );
   }
 }

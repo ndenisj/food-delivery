@@ -1,6 +1,23 @@
 import 'package:flutter/material.dart';
 
 class BoughtFoods extends StatefulWidget {
+  final String id;
+  final String imagePath;
+  final String category;
+  final String name;
+  final double price;
+  final double discount;
+  final double ratings;
+
+  BoughtFoods(
+      {this.id,
+      this.name,
+      this.imagePath,
+      this.category,
+      this.discount,
+      this.price,
+      this.ratings});
+
   @override
   _BoughtFoodsState createState() => _BoughtFoodsState();
 }
@@ -16,7 +33,7 @@ class _BoughtFoodsState extends State<BoughtFoods> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             image: DecorationImage(
-              image: AssetImage('assets/images/breakfast.jpeg'),
+              image: AssetImage(widget.imagePath),
               fit: BoxFit.cover,
             ),
           ),
@@ -55,7 +72,7 @@ class _BoughtFoodsState extends State<BoughtFoods> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Hot Coffee",
+                    widget.name,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -93,7 +110,7 @@ class _BoughtFoodsState extends State<BoughtFoods> {
                         width: 10,
                       ),
                       Text(
-                        "(22.0 Reviews)",
+                        "(${widget.ratings.toString()} Reviews)",
                         style: TextStyle(
                           color: Colors.grey,
                         ),
@@ -106,7 +123,7 @@ class _BoughtFoodsState extends State<BoughtFoods> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
                   Text(
-                    "22.0",
+                    widget.price.toString(),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.orangeAccent,

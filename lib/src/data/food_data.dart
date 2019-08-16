@@ -25,13 +25,13 @@ final foods = [
       category: '1',
       price: 22.0,
       discount: 33.5,
-      ratings: 99.0),
+      ratings: 9.0),
   Food(
       id: '1',
-      name: 'Chicken',
+      name: 'Grilled Chicken',
       imagePath: 'assets/images/lunch.jpeg',
       category: '1',
       price: 22.0,
       discount: 33.5,
-      ratings: 99.0),
+      ratings: 7.0),
 ];
