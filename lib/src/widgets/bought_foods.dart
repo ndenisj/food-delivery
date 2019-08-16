@@ -14,7 +14,7 @@ class _BoughtFoodsState extends State<BoughtFoods> {
           height: 250,
           width: double.infinity,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
             image: DecorationImage(
               image: AssetImage('assets/images/breakfast.jpeg'),
               fit: BoxFit.cover,
@@ -30,8 +30,8 @@ class _BoughtFoodsState extends State<BoughtFoods> {
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
+                bottomLeft: Radius.circular(10),
+                bottomRight: Radius.circular(10),
               ),
               gradient: LinearGradient(
                 colors: [

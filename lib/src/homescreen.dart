@@ -4,6 +4,7 @@ import 'widgets/home_top_info.dart';
 import 'widgets/food_category.dart';
 import 'widgets/search_field.dart';
 import 'widgets/bought_foods.dart';
+import 'data/food_data.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -11,6 +12,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Food> _foods = foods;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,11 +52,22 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 20,
           ),
-          Container(
-            child: BoughtFoods(),
+          Column(
+            children: <Widget>[
+              _buildFoodItems(),
+              _buildFoodItems(),
+              _buildFoodItems(),
+            ],
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildFoodItems() {
+    return Container(
+      margin: EdgeInsets.only(bottom: 20.0),
+      child: BoughtFoods(),
     );
   }
 }
