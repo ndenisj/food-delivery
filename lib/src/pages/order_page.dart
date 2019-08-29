@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/order_card.dart';
+import './signin_page.dart';
 
 class OrderPage extends StatefulWidget {
   @override
@@ -135,6 +136,10 @@ class _OrderPageState extends State<OrderPage> {
             ],
           ),
           InkWell(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => SignInPage()));
+            },
             child: Container(
               margin: EdgeInsets.symmetric(
                 vertical: 30,
