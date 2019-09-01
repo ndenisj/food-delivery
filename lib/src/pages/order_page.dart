@@ -53,7 +53,7 @@ class _OrderPageState extends State<OrderPage> {
                 ),
               ),
               Text(
-                "23.0",
+                "\u20A6 23.0",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,
@@ -77,7 +77,7 @@ class _OrderPageState extends State<OrderPage> {
                 ),
               ),
               Text(
-                "5.0",
+                "\u20A6 5.0",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,
@@ -101,7 +101,7 @@ class _OrderPageState extends State<OrderPage> {
                 ),
               ),
               Text(
-                "3.0",
+                "\u20A6 3.0",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,
@@ -126,7 +126,7 @@ class _OrderPageState extends State<OrderPage> {
                 ),
               ),
               Text(
-                "31.0",
+                "\u20A6 31.0",
                 style: TextStyle(
                   color: Color(0xFFD3D3D3),
                   fontSize: 18,
