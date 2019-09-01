@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/src/pages/signup_page.dart';
 
 class SignInPage extends StatefulWidget {
   @override
@@ -128,12 +129,18 @@ class _SignInPageState extends State<SignInPage> {
                   SizedBox(
                     width: 15,
                   ),
-                  Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      color: Colors.blueAccent,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 22,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext context) => SignUpPage()));
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(
+                        color: Colors.blueAccent,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 22,
+                      ),
                     ),
                   ),
                 ],
